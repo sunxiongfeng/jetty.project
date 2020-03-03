@@ -94,18 +94,13 @@ public class TestJettyOSGiBootHTTP2
         res.add(CoreOptions.systemProperty("jetty.alpn.protocols").value("h2,http/1.1"));
 
         String alpnBoot = System.getProperty("mortbay-alpn-boot");
-        if (alpnBoot == null)
+        if (alpnBoot != null)
         {
-            throw new IllegalStateException("Define path to alpn boot jar as system property -Dmortbay-alpn-boot");
+            File checkALPNBoot = new File(alpnBoot);
+            if (!checkALPNBoot.exists())
+                throw new IllegalStateException("Unable to find the alpn boot jar here: " + alpnBoot);
+            res.add(CoreOptions.vmOptions("-Xbootclasspath/p:" + checkALPNBoot.getAbsolutePath()));
         }
-        File checkALPNBoot = new File(alpnBoot);
-        if (!checkALPNBoot.exists())
-        {
-            throw new IllegalStateException("Unable to find the alpn boot jar here: " + alpnBoot);
-        }
-
-        res.add(CoreOptions.vmOptions("-Xbootclasspath/p:" + checkALPNBoot.getAbsolutePath()));
-
         res.add(mavenBundle().groupId("org.eclipse.jetty.osgi").artifactId("jetty-osgi-alpn").versionAsInProject().noStart());
         res.add(mavenBundle().groupId("org.eclipse.jetty").artifactId("jetty-alpn-openjdk8-server").versionAsInProject().start());
         res.add(mavenBundle().groupId("org.eclipse.jetty").artifactId("jetty-alpn-server").versionAsInProject().start());

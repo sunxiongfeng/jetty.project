@@ -1,5 +1,8 @@
 DO NOT EDIT - See: https://www.eclipse.org/jetty/documentation/current/startup-modules.html
 
+[depend]
+alpn-8-boot
+
 [files]
 maven://org.mortbay.jetty.alpn/alpn-boot/8.1.6.v20151105|lib/alpn/alpn-boot-8.1.6.v20151105.jar
 
