@@ -19,7 +19,6 @@
 package org.eclipse.jetty.webapp;
 
 import java.lang.annotation.Annotation;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -27,14 +26,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
-import org.eclipse.jetty.util.TypeUtil;
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;
 import org.eclipse.jetty.util.resource.EmptyResource;
 import org.eclipse.jetty.util.resource.Resource;
-import org.eclipse.jetty.xml.XmlParser;
 
 /**
  * MetaData
@@ -46,7 +43,7 @@ public class MetaData
     private static final Logger LOG = Log.getLogger(MetaData.class);
 
     public static final String VALIDATE_XML = "org.eclipse.jetty.webapp.validateXml";
-    public static final String ORDERED_LIBS = "javax.servlet.context.orderedLibs";
+    public static final String ORDERED_LIBS = "jakarta.servlet.context.orderedLibs";
     public static final Resource NON_FRAG_RESOURCE = EmptyResource.INSTANCE;
 
     protected Map<String, OriginInfo> _origins = new HashMap<>();

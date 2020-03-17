@@ -21,9 +21,9 @@ package org.eclipse.jetty.servlet.listener;
 import java.lang.reflect.Field;
 import java.util.Iterator;
 import java.util.Map;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
 
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 import org.eclipse.jetty.util.Loader;
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;

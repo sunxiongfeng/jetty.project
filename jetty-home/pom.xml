@@ -311,11 +311,11 @@
               <artifactItems>
                 <artifactItem>
                   <groupId>org.eclipse.jetty.toolchain</groupId>
-                  <artifactId>jetty-servlet-api</artifactId>
+                  <artifactId>jetty-jakarta-servlet-api</artifactId>
                   <version>${servlet.api.version}</version>
                   <overWrite>true</overWrite>
                   <outputDirectory>${assembly-directory}/lib</outputDirectory>
-                  <destFileName>jetty-servlet-api-${servlet.api.version}.jar</destFileName>
+                  <destFileName>jetty-jakarta-servlet-api-${servlet.api.version}.jar</destFileName>
                 </artifactItem>
               </artifactItems>
             </configuration>
@@ -401,7 +401,7 @@
             </goals>
             <configuration>
               <excludeGroupIds>org.glassfish.web</excludeGroupIds>
-              <includeArtifactIds>taglibs-standard-spec,taglibs-standard-impl</includeArtifactIds>
+              <includeArtifactIds>taglibs-standard</includeArtifactIds>
               <prependGroupId>true</prependGroupId>
               <includeTypes>jar</includeTypes>
               <outputDirectory>${assembly-directory}/lib/apache-jstl</outputDirectory>
@@ -415,7 +415,7 @@
             </goals>
             <configuration>
               <excludeGroupIds>org.glassfish.web</excludeGroupIds>
-              <includeArtifactIds>taglibs-standard-spec,taglibs-standard-impl</includeArtifactIds>
+              <includeArtifactIds>taglibs-standard</includeArtifactIds>
               <prependGroupId>true</prependGroupId>
               <includeTypes>jar</includeTypes>
               <classifier>sources</classifier>

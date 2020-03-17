@@ -35,14 +35,29 @@
   <dependencies>
     <!-- JSTL Api -->
     <dependency>
-      <groupId>org.apache.taglibs</groupId>
-      <artifactId>taglibs-standard-spec</artifactId>
+      <groupId>jakarta.servlet.jsp.jstl</groupId>
+      <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>jakarta.servlet</groupId>
+          <artifactId>jakarta.servlet-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>jakarta.el</groupId>
+          <artifactId>jakarta.el-api</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <!-- JSTL Impl -->
+<!--    <dependency>-->
+<!--      <groupId>org.apache.taglibs</groupId>-->
+<!--      <artifactId>taglibs-standard-impl</artifactId>-->
+<!--    </dependency>-->
+
     <dependency>
-      <groupId>org.apache.taglibs</groupId>
-      <artifactId>taglibs-standard-impl</artifactId>
+      <groupId>org.mortbay.jasper</groupId>
+      <artifactId>taglibs-standard</artifactId>
     </dependency>
 
     <dependency>

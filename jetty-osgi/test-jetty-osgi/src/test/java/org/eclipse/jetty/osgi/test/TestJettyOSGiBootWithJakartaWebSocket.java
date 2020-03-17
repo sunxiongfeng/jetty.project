@@ -22,12 +22,13 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
-import jakarta.websocket.ContainerProvider;
-import jakarta.websocket.RemoteEndpoint;
-import jakarta.websocket.Session;
-import jakarta.websocket.WebSocketContainer;
+import javax.websocket.ContainerProvider;
+import javax.websocket.RemoteEndpoint;
+import javax.websocket.Session;
+import javax.websocket.WebSocketContainer;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.Configuration;

@@ -24,8 +24,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
 
 import jakarta.websocket.ClientEndpointConfig;
 import jakarta.websocket.ContainerProvider;
@@ -33,6 +31,9 @@ import jakarta.websocket.Endpoint;
 import jakarta.websocket.HandshakeResponse;
 import jakarta.websocket.Session;
 import jakarta.websocket.WebSocketContainer;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+
 import org.eclipse.jetty.util.FuturePromise;
 import org.eclipse.jetty.websocket.core.FrameHandler;
 import org.eclipse.jetty.websocket.core.server.Negotiation;

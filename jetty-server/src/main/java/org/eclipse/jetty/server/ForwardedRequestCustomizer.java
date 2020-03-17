@@ -22,8 +22,8 @@ import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
 import java.net.InetSocketAddress;
-import javax.servlet.ServletRequest;
 
+import jakarta.servlet.ServletRequest;
 import org.eclipse.jetty.http.HostPortHttpField;
 import org.eclipse.jetty.http.HttpField;
 import org.eclipse.jetty.http.HttpFields;
@@ -568,7 +568,7 @@ public class ForwardedRequestCustomizer implements Customizer
         @SuppressWarnings("unused")
         public void handleCipherSuite(HttpField field)
         {
-            _request.setAttribute("javax.servlet.request.cipher_suite", field.getValue());
+            _request.setAttribute("jakarta.servlet.request.cipher_suite", field.getValue());
             if (isSslIsSecure())
             {
                 _request.setSecure(true);
@@ -579,7 +579,7 @@ public class ForwardedRequestCustomizer implements Customizer
         @SuppressWarnings("unused")
         public void handleSslSessionId(HttpField field)
         {
-            _request.setAttribute("javax.servlet.request.ssl_session_id", field.getValue());
+            _request.setAttribute("jakarta.servlet.request.ssl_session_id", field.getValue());
             if (isSslIsSecure())
             {
                 _request.setSecure(true);
