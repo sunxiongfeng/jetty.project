@@ -22,10 +22,10 @@ import java.net.URI;
 import java.util.Map;
 import java.util.function.BiConsumer;
 
-import jakarta.websocket.OnMessage;
-import jakarta.websocket.server.ServerEndpoint;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.websocket.OnMessage;
+import jakarta.websocket.server.ServerEndpoint;
 
 import org.eclipse.jetty.http.HttpVersion;
 import org.eclipse.jetty.http.pathmap.PathSpec;
